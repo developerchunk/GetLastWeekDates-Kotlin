@@ -9,13 +9,13 @@ fun main(args: Array<String>) {
         month = 1,
         year = 2022,
         day_ = {
-            date = it
+            date = it.reversed()
         },
         month_ = {
-            month = it
+            month = it.reversed()
         },
         year_ = {
-            year = it
+            year = it.reversed()
         }
     )
 
@@ -41,7 +41,7 @@ fun dates(
     val mMonth = arrayListOf<Int>()
     val mYear = arrayListOf<Int>()
 
-    for (i in 1..8) {
+    for (i in 1..7) {
         if (days!=1) {
             days -= 1
             dates.add(days)
@@ -62,9 +62,6 @@ fun dates(
             dates.add(days)
         }
     }
-
-    mMonth.removeLast()
-    mYear.removeLast()
 
     day_(dates)
     month_(mMonth)
